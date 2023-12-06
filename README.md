@@ -1,4 +1,4 @@
-![Image](https://source.unsplash.com/collection/881815 "Просто красивая картинка")
+![Image](https://source.unsplash.com/collection/881815 "Красивая картинка")
 
 Сборник простых рецептов, как сделать что-то на выбранном языке программирования. (howto?)
 

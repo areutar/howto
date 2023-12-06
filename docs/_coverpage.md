@@ -1,6 +1,8 @@
 <!-- _coverpage.md -->
 
-<p style="font-size:100px">HOWTO?</p>
+<span style="font-size:60px">HOWTO</span><br>
+
+<span style="font-size:60px">IN PYTHON, JAVA, JAVASCRIPT</span>
 
 [GitHub](https://github.com/areutar/howto/)
-[Getting Started](#HOWTO)
+[Getting Started](/README.md)

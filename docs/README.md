@@ -1,5 +1,3 @@
-# HOWTO?
-
 - #### [Strings](/source/strings/strings.md)
 
     Строковый тип данных

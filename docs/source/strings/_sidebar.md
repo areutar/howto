@@ -1,12 +1,13 @@
 <!-- _sidebar.md -->
 
-
-[Strings](/source/strings/strings.md)
+- [Strings](/source/strings/strings.md)
 
 * [findAllOccurrences](/source/strings/findAllOccurrences.md)
 
-[DateTime](/source/datetime/datetime.md)
+* [getNumberOfArticles](/source/strings/getNumberOfArticles.md)
 
-[Simple](/source/simple/simple.md)
+- [DateTime](/source/datetime/datetime.md)
 
-[Home](/)
+- [Simple](/source/simple/simple.md)
+
+- [Home](/)

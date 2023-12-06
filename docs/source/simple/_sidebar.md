@@ -7,6 +7,6 @@
 
 [Simple](/source/simple/simple.md)
 
-* [Валидный пароль](/source/simple/isGoodPassword.md)
+* [isGoodPassword](/source/simple/isGoodPassword.md)
 
 [Home](/)

@@ -5,7 +5,7 @@
 
 [DateTime](/source/datetime/datetime.md)
 
-* [Количество дней в месяце](/source/datetime/getMonthLength.md)
+* [getMonthLength](/source/datetime/getMonthLength.md)
 
 [Simple](/source/simple/simple.md)
 
