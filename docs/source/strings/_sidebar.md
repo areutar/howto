@@ -1,10 +1,8 @@
 <!-- _sidebar.md -->
 
 - [Strings](/source/strings/strings.md)
-
-* [findAllOccurrences](/source/strings/findAllOccurrences.md)
-
-* [getNumberOfArticles](/source/strings/getNumberOfArticles.md)
+    - [getNumberOfArticles](/source/strings/getNumberOfArticles.md)
+    - [findAllOccurrences](/source/strings/findAllOccurrences.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
