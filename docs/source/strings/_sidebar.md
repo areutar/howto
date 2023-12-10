@@ -4,6 +4,7 @@
     - [getNumberOfArticles](/source/strings/getNumberOfArticles.md)
     - [findAllOccurrences](/source/strings/findAllOccurrences.md)
     - [deleteComments](/source/strings/deleteComments.md)
+    - [multilineString](/source/strings/multilineString.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
