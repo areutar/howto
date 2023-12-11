@@ -3,5 +3,28 @@
         "src"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "java.test.config": [
+        {
+            "name": "myConfiguration",
+            "classPaths": [
+                "$Test"
+            ],
+            "workingDirectory": "${workspaceFolder}",
+            "vmargs": [
+                "-Xmx512M"
+            ],
+            "env": {
+                "key": "value"
+            },
+        },
+        {
+            // Another configuration item...
+        },
+    ],
+    "java.test.defaultConfig": "myConfiguration",
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    
 }
