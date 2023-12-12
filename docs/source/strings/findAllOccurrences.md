@@ -9,37 +9,37 @@
 <!-- tabs:start -->
 #### **Python**
 ```python
-def find_all(target, symbol):
-    symbols = []
-    index = 0
-    while index >= 0:
-        index = target.find(symbol, index)
-        if index >= 0:
-            symbols.append(index)
-            index += 1
-    return symbols
+def find_all_occurrences(target, symbol):
+  symbols = []
+  index = 0
+  while index >= 0:
+    index = target.find(symbol, index)
+    if index >= 0:
+      symbols.append(index)
+      index += 1
+  return symbols
 ```
 
 #### **Test Python**
 ```python
-from __future__ import absolute_import
-from python.arithm import *
+from find_all_occurrences import find_all_occurrences
 import pytest
 
 data = [
-    ('abcdabcaaa', 'a', [0, 4, 7, 8, 9]),
-    ('abcadbcaaa', 'e', []),
-    ('abcadbcaaa', 'd', [4]),
-    ('tttt', 't', [0, 1, 2, 3]),
-    ('ppooooopp', 'p', [0, 1, 7, 8]),
-    ('ppooooopp', 'o', [2, 3, 4, 5, 6]),
-    ('ppooppoopp', 'o', [2, 3, 6, 7]),
+  ('abcdabcaaa', 'a', [0, 4, 7, 8, 9]),
+  ('abcadbcaaa', 'e', []),
+  ('abcadbcaaa', 'd', [4]),
+  ('tttt', 't', [0, 1, 2, 3]),
+  ('ppooooopp', 'p', [0, 1, 7, 8]),
+  ('ppooooopp', 'o', [2, 3, 4, 5, 6]),
+  ('ppooppoopp', 'o', [2, 3, 6, 7]),
 ]
 
 @pytest.mark.parametrize('text, ch, expected', data)
 def test_arithm(text, ch, expected):
-    assert find_all(text, ch) == expected
+  assert find_all_occurrences(text, ch) == expected
 ```
+
 
 #### **Java**
 ```java
@@ -50,6 +50,7 @@ public static List<Integer> findAllOccurrences(String target, char ch) {
        .collect(Collectors.toList());        
     }
 ```
+[full code](../src/string/findAllOccurrences/FindAllOccurrences.java)
 
 #### **Test Java**
 ```java
