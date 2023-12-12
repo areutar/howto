@@ -5,6 +5,7 @@
     - [findAllOccurrences](/source/strings/findAllOccurrences.md)
     - [deleteComments](/source/strings/deleteComments.md)
     - [multilineString](/source/strings/multilineString.md)
+    - [getInitials](/source/strings/getInitials.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
