@@ -6,7 +6,7 @@ public class Utility {
     public static final int MAX_SIZE_LINE = 44;
 
     public static void main(String[] args) {
-        String input = "Shakespeare’s most famous plays include Romeo and Juliet, Macbeth, Hamlet, King Lear, Othello, and Julius Caesar. Usually, Shakespeare did not invent the stories that he told in his plays. Instead, he wrote his plays using stories that already existed. However, Shakespeare’s plays told these stories in a more interesting way than ever before. Some of the stories were tragedies, some were comedies, and some described historical events.";
+        String input = "";
         setClipboardContents(splitStringInTextBlock(input));
     }
 
