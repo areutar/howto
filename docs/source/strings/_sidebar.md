@@ -7,6 +7,7 @@
     - [multilineString](/source/strings/multilineString.md)
     - [getInitials](/source/strings/getInitials.md)
     - [listOfAllChars](/source/strings/listOfAllChars.md)
+    - [numberOfDigits](/source/strings/numberOfDigits.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
