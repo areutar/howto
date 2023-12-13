@@ -6,8 +6,8 @@
     - [deleteComments](/source/strings/deleteComments.md)
     - [multilineString](/source/strings/multilineString.md)
     - [getInitials](/source/strings/getInitials.md)
-    - [listOfAllChars](/source/strings/listOfAllChars.md)
-    - [numberOfDigits](/source/strings/numberOfDigits.md)
+    - [listOfAllChars](/source/strings/listOfAllChars.md)    
+    - [countDigits](/source/strings/countDigits.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
