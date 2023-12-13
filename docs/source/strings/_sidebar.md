@@ -8,6 +8,7 @@
     - [getInitials](/source/strings/getInitials.md)
     - [listOfAllChars](/source/strings/listOfAllChars.md)    
     - [countDigits](/source/strings/countDigits.md)
+    - [everyThird](/source/strings/everyThird.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
