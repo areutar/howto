@@ -1,16 +1,21 @@
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
+package utility;
+import static utility.ClipboardInOut.getTextFromClipboard;
+import static utility.ClipboardInOut.setTextToClipboard;
 
-public class Utility {
+public class DividedStringBuilder {
     public static final int MAX_SIZE_LINE = 44;
 
     public static void main(String[] args) {
-        String input = "";
-        setClipboardContents(splitStringInTextBlock(input));
+        String input = getTextFromClipboard();
+        String output = divideString(input);
+        System.out.println(output);
+        setTextToClipboard(output);
     }
 
-    public static String splitString(String input) {
+
+    // преобразует длинную строку в сумму коротких,
+    // каждая размера примерно MAX_SIZE_LINE
+    public static String divideString(String input) {
         input = input.trim();
         String result = "";
         String[] words = input.split("\\s+");
@@ -34,38 +39,10 @@ public class Utility {
                 result += line + " \"\n";
                 line = "\"";
             }
-
         }
-
         return result.stripTrailing();
     }
 
-    public static String splitStringInTextBlock(String input) {
-        input = input.trim();
-        String result = "";
-        String[] words = input.split("\\s+");
-        String line = "\"\"\"";
-
-        for (int j = 0; j < words.length; j++) {
-            line += words[j];
-            if (j == words.length - 1) {
-                return result + line + "\"\"\"";
-            }
-
-            line += " ";
-            if (line.length() >= MAX_SIZE_LINE) {
-                result += line + " \n";
-                line = "";
-            }
-        }
-        return result;
-    }
-
-    public static void setClipboardContents(String srcData) {
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(new StringSelection(srcData), null);
-
-    }
 }
 
 // Добавление страницы
