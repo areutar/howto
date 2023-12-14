@@ -9,6 +9,7 @@
     - [listOfAllChars](/source/strings/listOfAllChars.md)    
     - [countDigits](/source/strings/countDigits.md)
     - [everyThird](/source/strings/everyThird.md)
+    - [mostFrequentSymbol](/source/strings/mostFrequentSymbol.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
