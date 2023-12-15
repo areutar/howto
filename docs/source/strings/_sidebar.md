@@ -11,6 +11,7 @@
     - [everyThird](/source/strings/everyThird.md)
     - [mostFrequentSymbol](/source/strings/mostFrequentSymbol.md)
     - [reverseString](/source/strings/reverseString.md)
+   - [countLower](/source/strings/countLower.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
