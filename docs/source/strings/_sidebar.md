@@ -1,5 +1,4 @@
 <!-- _sidebar.md -->
-
 - [Strings](/source/strings/strings.md)
     - [getNumberOfArticles](/source/strings/getNumberOfArticles.md)
     - [findAllOccurrences](/source/strings/findAllOccurrences.md)
@@ -13,10 +12,12 @@
     - [reverseString](/source/strings/reverseString.md)
    - [countLower](/source/strings/countLower.md)
    - [checkCapitalized](/source/strings/checkCapitalized.md)
+   - [getSumOfDigits](/source/strings/getSumOfDigits.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
 - [Simple](/source/simple/simple.md)
 
 - [Home](/)
+
 
