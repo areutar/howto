@@ -12,9 +12,11 @@
     - [mostFrequentSymbol](/source/strings/mostFrequentSymbol.md)
     - [reverseString](/source/strings/reverseString.md)
    - [countLower](/source/strings/countLower.md)
+   - [checkCapitalized](/source/strings/checkCapitalized.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
 - [Simple](/source/simple/simple.md)
 
 - [Home](/)
+
