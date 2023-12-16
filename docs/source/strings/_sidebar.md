@@ -14,6 +14,7 @@
    - [checkCapitalized](/source/strings/checkCapitalized.md)
    - [getSumOfDigits](/source/strings/getSumOfDigits.md)
    - [sortString](/source/strings/sortString.md)
+   - [isGoodPassword](/source/strings/isGoodPassword.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
