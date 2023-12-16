@@ -16,10 +16,12 @@
    - [sortString](/source/strings/sortString.md)
    - [isGoodPassword](/source/strings/isGoodPassword.md)
    - [checkPhoneNumber](/source/strings/checkPhoneNumber.md)
+   - [countEqualNeighbours](/source/strings/countEqualNeighbours.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
 - [Simple](/source/simple/simple.md)
 
 - [Home](/)
+
 
