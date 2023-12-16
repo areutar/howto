@@ -13,11 +13,10 @@
    - [countLower](/source/strings/countLower.md)
    - [checkCapitalized](/source/strings/checkCapitalized.md)
    - [getSumOfDigits](/source/strings/getSumOfDigits.md)
+   - [sortString](/source/strings/sortString.md)
 
 - [DateTime](/source/datetime/datetime.md)
 
 - [Simple](/source/simple/simple.md)
 
 - [Home](/)
-
-
