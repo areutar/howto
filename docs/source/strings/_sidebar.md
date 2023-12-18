@@ -17,6 +17,9 @@
    - [isGoodPassword](/source/strings/isGoodPassword.md)
    - [checkPhoneNumber](/source/strings/checkPhoneNumber.md)
    - [countEqualNeighbours](/source/strings/countEqualNeighbours.md)
+   - [methods](/source/strings/methods.md)
+
+- [Array](/source/array/array.md)
 
 - [DateTime](/source/datetime/datetime.md)
 

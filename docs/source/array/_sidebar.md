@@ -9,6 +9,4 @@
 
 [Simple](/source/simple/simple.md)
 
-* [isGoodPassword](/source/simple/isGoodPassword.md)
-
 [Home](/)
