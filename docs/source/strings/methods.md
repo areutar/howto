@@ -112,7 +112,7 @@ s.capitalize()
 
 ```java
 return str.substring(0, 1).toUpperCase() +
-        str.substring(1)
+    str.substring(1)
 ```
 #### **JavaScript**
 
@@ -129,17 +129,21 @@ return str.substring(0, 1).toUpperCase() +
 #### **Python**
 
 ```python
-s.title()
+s = "1ab1ab1ab1a-b1"
+print(s.title())
+>>1Ab1Ab1Ab1A-B1
+
 ```
 #### **Java**
 
 ```java
 public static String title(String text) {
-        Pattern alnum = Pattern.compile("\\b\\p{Alnum}+\\b");
-        Matcher matcher = alnum.matcher(text);
-        return matcher.replaceAll(t -> t.group().substring(0, 1).toUpperCase() +
-                t.group().substring(1).toLowerCase());
-    }
+    Pattern alnum = Pattern.compile("\\b\\p{IsAlphabetic}+\\b");
+    Matcher matcher = alnum.matcher(text);
+    return matcher.replaceAll(t -> t.group().substring(0, 1).toUpperCase() +
+        t.group().substring(1).toLowerCase());
+  }
+// не работает так же, как в python, на строках с uncased символами
 ```
 #### **JavaScript**
 
@@ -206,16 +210,16 @@ s.swapcase()
 
 ```java
 public static String capitalize(String text) {
-        return text.chars()
-                .mapToObj(i -> (char) i)
-                .map(F::swapChar)
-                .map(String::valueOf)
-                .collect(Collectors.joining());
-    }
+    return text.chars()
+        .mapToObj(i -> (char) i)
+        .map(F::swapChar)
+        .map(String::valueOf)
+        .collect(Collectors.joining());
+  }
 
 public static char swapChar(char c) {
-        return Character.isUpperCase(c) ? Character.toLowerCase(c) : Character.toUpperCase(c);
-    }
+    return Character.isUpperCase(c) ? Character.toLowerCase(c) : Character.toUpperCase(c);
+  }
 ```
 #### **JavaScript**
 
@@ -226,7 +230,7 @@ public static char swapChar(char c) {
 
 ## - isupper
 
-Возвращает True, если все символы строки, поддерживающие приведение к регистру, приведены к верхнему, иначе — False.
+Возвращает True, если все символы в строке, поддерживающие приведение к регистру, имеют верхний регистр и имеется хотя бы один такой символ, в противном случае — False.
 
 <!-- tabs: start -->
 #### **Python**
@@ -237,12 +241,8 @@ s.isupper()
 #### **Java**
 
 ```java
-public static boolean isUpper(String input) {
-        return input.chars()
-                .mapToObj(i -> (char) i)
-                .filter(Character::isAlphabetic)
-                .allMatch(Character::isUpperCase);
-    }
+String upper = "ЁЁЁ";
+System.out.println(upper.matches("\\p{Lu}+"));
 ```
 #### **JavaScript**
 
@@ -253,7 +253,7 @@ public static boolean isUpper(String input) {
 
 ## - islower
 
-Возвращает True, если все символы строки, поддерживающие приведение к регистру, приведены к нижнему, иначе — False.
+Возвращает True, если все символы в строке, поддерживающие приведение к регистру, имеют нижний регистр и имеется хотя бы один такой символ, в противном случае — False.
 
 <!-- tabs: start -->
 #### **Python**
@@ -264,12 +264,8 @@ s.islower()
 #### **Java**
 
 ```java
-public static boolean isLower(String input) {
-        return input.chars()
-                .mapToObj(i -> (char) i)
-                .filter(Character::isAlphabetic)
-                .allMatch(Character::isLowerCase);
-    }
+String lower = "ёёё";
+System.out.println(lower.matches("\\p{Ll}+"));
 ```
 #### **JavaScript**
 
@@ -291,7 +287,21 @@ s.istitle()
 #### **Java**
 
 ```java
+ public static boolean isTitle(String input) {
+        return Arrays.stream(input.split("\\s+"))
+                .allMatch(Sample::isTitledWord);
+    }
 
+    public static boolean isTitledWord(String word) {
+        return Arrays.stream(word.split("\\s+"))
+                .allMatch(s -> {
+                    return s.substring(1).chars()
+                            .mapToObj(i -> (char) i)
+                            .allMatch(Character::isLowerCase)
+                            && Character.isUpperCase(s.charAt(0));
+                });
+    }
+    // работает как в python, только если все символы cased
 ```
 #### **JavaScript**
 
@@ -406,7 +416,7 @@ s.replace(old, new)
 #### **Java**
 
 ```java
-
+s.replace(шило, мыло)
 ```
 #### **JavaScript**
 
@@ -456,7 +466,8 @@ s.isalnum()
 #### **Java**
 
 ```java
-
+String input = "3ё";
+System.out.println(input.matches("[\\p{N}\\p{L}]+"));
 ```
 #### **JavaScript**
 
@@ -478,7 +489,54 @@ s.isalpha()
 #### **Java**
 
 ```java
+String input = "её";
+System.out.println(input.matches("\\p{L}+"));
+```
+#### **JavaScript**
 
+```javascript
+
+```
+<!-- tabs: end -->
+
+## - isascii
+
+Возвращает True, если строка пуста или все символы в ней являются ASCII, в противном случае — False. Символы ASCII имеют кодовые точки в диапазоне от U+0000 до U+007F.
+
+<!-- tabs: start -->
+#### **Python**
+
+```python
+s.isascii()
+```
+#### **Java**
+
+```java
+String ascii = "sdF .j!35d";
+System.out.println(ascii.matches("\\p{ASCII}+"));
+```
+#### **JavaScript**
+
+```javascript
+
+```
+<!-- tabs: end -->
+
+## - isnumeric
+
+Возвращает True, если все символы в строке являются цифрами и имеется хотя бы один символ, в противном случае — False. Числовые символы включают в себя цифровые символы и все символы, имеющие свойство числового значения Юникода, например U+2155, Обычная дробь одна пятая. Формально числовыми символами являются символы со значением свойства Numeric_Type=Digit, Numeric_Type=Decimal или Numeric_Type=Numeric. (p{N} = p{Nd} + p{Nl} + p{No})
+
+<!-- tabs: start -->
+#### **Python**
+
+```python
+s.isnumeric()
+```
+#### **Java**
+
+```java
+String input = "Ⅷ";
+System.out.println(input.matches("\\p{N}+"));
 ```
 #### **JavaScript**
 
@@ -489,7 +547,7 @@ s.isalpha()
 
 ## - isdigit
 
-Метод isdigit() определяет, состоит ли исходная строка только из цифровых символов. Метод возвращает значение True если исходная строка является непустой и состоит только из цифровых символов и False в противном случае.
+Возвращает True, если все символы в строке являются цифрами и имеется хотя бы один символ, в противном случае — False. Цифры включают десятичные символы и цифры, требующие специальной обработки, например цифры верхнего индекса совместимости. Сюда входят цифры, которые нельзя использовать для образования чисел по основанию 10, например числа Харости. Формально цифра — это символ, имеющий значение свойства Numeric_Type=Digit или Numeric_Type=Decimal.
 
 <!-- tabs: start -->
 #### **Python**
@@ -500,7 +558,31 @@ s.isdigit()
 #### **Java**
 
 ```java
+String input = "⁰³⁸";
+System.out.println(input.matches("[\\p{Nd}\\p{No}]+"));
+```
+#### **JavaScript**
 
+```javascript
+
+```
+<!-- tabs: end -->
+
+## - isdecimal
+
+Возвращает True, если все символы в строке являются десятичными символами и имеется хотя бы один символ, в противном случае — False. Десятичные символы — это те, которые можно использовать для формирования чисел по основанию 10, например. U + 0660, АРАБСКАЯ-ИНДИЙСКАЯ ЦИФРА НОЛЬ. Формально десятичный символ — это символ общей категории Юникода «Nd».
+
+<!-- tabs: start -->
+#### **Python**
+
+```python
+s.isdecimal()
+```
+#### **Java**
+
+```java
+String input = "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡";
+System.out.println(input.matches("\\p{Nd}+"));
 ```
 #### **JavaScript**
 
@@ -511,7 +593,7 @@ s.isdigit()
 
 ## - isspace
 
-Метод isspace() определяет, состоит ли исходная строка только из пробельных символов. Метод возвращает значение True если строка состоит только из пробельных символов и False в противном случае.
+Возвращает True, если в строке есть только пробельные символы и есть хотя бы один символ, в противном случае — False.
 
 <!-- tabs: start -->
 #### **Python**
@@ -522,7 +604,7 @@ s.isspace()
 #### **Java**
 
 ```java
-
+System.out.println("\t\f\n\r".isBlank());
 ```
 #### **JavaScript**
 
@@ -585,6 +667,12 @@ s.center(width[, fillchar])
 
 ## - Template Class
 
-[Все методы](https://smartiqa.ru/courses/python/lesson-4)
+[Все методы](https://docs.python.org/3/library/stdtypes.html#str.isnumeric)
+
+[Ещё описание](https://smartiqa.ru/courses/python/lesson-4)
+
+[Методы со степика](https://stepik.org/lesson/296416/step/1?unit=278136)
 
 [Форматирование](https://www.geeksforgeeks.org/string-formatting-in-python/)
+
+[Числовые типы](https://stackoverflow.com/questions/44891070/whats-the-difference-between-str-isdigit-isnumeric-and-isdecimal-in-pyth)

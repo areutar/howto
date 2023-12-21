@@ -18,6 +18,7 @@
    - [checkPhoneNumber](/source/strings/checkPhoneNumber.md)
    - [countEqualNeighbours](/source/strings/countEqualNeighbours.md)
    - [methods](/source/strings/methods.md)
+   - [longestWord](/source/strings/longestWord.md)
 
 - [Array](/source/array/array.md)
 
@@ -26,5 +27,6 @@
 - [Simple](/source/simple/simple.md)
 
 - [Home](/)
+
 
 
