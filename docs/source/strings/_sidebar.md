@@ -1,4 +1,10 @@
 <!-- _sidebar.md -->
+- [DateTime](/source/datetime/datetime.md)
+
+- [Sequence](/source/sequence/sequence.md)
+
+- [Simple](/source/simple/simple.md)
+
 - [Strings](/source/strings/strings.md)
     - [getNumberOfArticles](/source/strings/getNumberOfArticles.md)
     - [findAllOccurrences](/source/strings/findAllOccurrences.md)
@@ -20,13 +26,4 @@
    - [methods](/source/strings/methods.md)
    - [longestWord](/source/strings/longestWord.md)
 
-- [Array](/source/array/array.md)
-
-- [DateTime](/source/datetime/datetime.md)
-
-- [Simple](/source/simple/simple.md)
-
 - [Home](/)
-
-
-

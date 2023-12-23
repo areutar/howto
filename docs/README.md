@@ -1,9 +1,9 @@
-- #### [Strings](/source/strings/strings.md)
+- #### [DateTime](/source/datetime/datetime.md)
 
-    Строковый тип данных
+    Всё о дате и времени
 ---
 
-- #### [DateTime](/source/datetime/datetime.md)
+- #### [Sequence](/source/sequence/sequence.md)
 
     Всё о дате и времени
 ---
@@ -12,4 +12,10 @@
 
     Простые задачи, для которых трудно подобрать тип
 ---
+
+- #### [Strings](/source/strings/strings.md)
+
+    Строковый тип данных
+---
+
 
