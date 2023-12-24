@@ -4,11 +4,12 @@ import java.util.Comparator;
 import java.util.stream.Collectors;
 
 public class OrderedString {
-    public static boolean orderedString(String input) {
+    public static void orderedString(String input) {
         if (input.length() <= 1) {
-            return true;
+            System.out.println("true");
         }
-        return input.equals(sortString(input));
+        String sortedString = sortString(input);
+        System.out.println(input.equals(sortedString));
     }
 
     public static String sortString(String input) {
