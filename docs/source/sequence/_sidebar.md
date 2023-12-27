@@ -7,6 +7,7 @@
    - [orderedString](/source/sequence/orderedString.md)
    - [detectProgression](/source/sequence/detectProgression.md)
    - [swapMinAndMax](/source/sequence/swapMinAndMax.md)
+   - [createCopyList](/source/sequence/createCopyList.md)
 
 [Simple](/source/simple/simple.md)
 
