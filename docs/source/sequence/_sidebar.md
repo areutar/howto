@@ -6,9 +6,11 @@
    - [mergeOrderedLists](/source/sequence/mergeOrderedLists.md)
    - [orderedString](/source/sequence/orderedString.md)
    - [detectProgression](/source/sequence/detectProgression.md)
+   - [swapMinAndMax](/source/sequence/swapMinAndMax.md)
 
 [Simple](/source/simple/simple.md)
 
 [Strings](/source/strings/strings.md)
 
 [Home](/)
+
