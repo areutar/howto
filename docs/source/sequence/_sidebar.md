@@ -8,10 +8,10 @@
    - [detectProgression](/source/sequence/detectProgression.md)
    - [swapMinAndMax](/source/sequence/swapMinAndMax.md)
    - [createCopyList](/source/sequence/createCopyList.md)
+   - [listSorting.md](/source/sequence/listSorting.md.md)
 
 [Simple](/source/simple/simple.md)
 
 [Strings](/source/strings/strings.md)
 
 [Home](/)
-
