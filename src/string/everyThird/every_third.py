@@ -1,5 +1,5 @@
 def every_third_with_del(input):
-  lst = input[:]
+  lst = list(input)
   del lst[::3]
   return ''.join(lst)
 
