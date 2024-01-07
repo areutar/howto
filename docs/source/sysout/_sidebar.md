@@ -9,5 +9,6 @@
 [Strings](/source/strings/strings.md)
 
 [Sysout](/source/sysout/starTriangle2.md)
+   - [starTriangle2](/source/sysout/starTriangle2.md)
 
 [Home](/)

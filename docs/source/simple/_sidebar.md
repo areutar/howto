@@ -6,8 +6,10 @@
 
 [Simple](/source/simple/simple.md)
 
-* [isGoodPassword](/source/simple/isGoodPassword.md)
+- [isGoodPassword](/source/simple/isGoodPassword.md)
 
 [Strings](/source/strings/strings.md)
+
+[Sysout](/source/sysout/starTriangle2.md)
 
 [Home](/)
