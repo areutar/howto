@@ -27,5 +27,6 @@
     "java.project.sourcePaths": [
         "src"
     ],
-    
+        "bookmarks.navigateThroughAllFiles": false,
+        
 }

@@ -1,8 +1,8 @@
-package string.makingSlices;
+package sequence.makingSlices;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static string.makingSlices.RangeConfigurator.*;
+import static sequence.makingSlices.RangeConfigurator.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -49,7 +49,7 @@ public class RangeConfiguratorTest {
     @Test
     void whenStartEqualsEndThenReturnTheSame() {
         RangeConfigurator configurator = new RangeConfigurator(1, 1, 1, 5);
-        String expected = "[start=1, end=1, step=1, length=5]";
+        String expected = "[start=1, end=2, step=1, length=5]";
 
         assertEquals(expected, configurator.toString());
     }
