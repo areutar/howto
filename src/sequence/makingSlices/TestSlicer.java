@@ -17,6 +17,14 @@ public class TestSlicer {
     private final Slicer slices = new Slicer();
 
     @Test
+    public void whenListIsNullThenThrowsIllegalArgumentException() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            slices.slice((List<Object>) null, 1, 2, 1);
+        });
+        assertEquals(Slicer.LIST_IS_NULL, exception.getMessage());
+    }
+
+    @Test
     public void whenListIsEmptyThenReturnEmptyList() {
         List<Integer> inputList = new ArrayList<>();
         List<Integer> expected = new ArrayList<>();
