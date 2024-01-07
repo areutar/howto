@@ -26,6 +26,7 @@
 - [countEqualNeighbours](/source/strings/countEqualNeighbours.md)
 - [methods](/source/strings/methods.md)
 - [longestWord](/source/strings/longestWord.md)
+- [splitStringByNewLine](/source/strings/splitStringByNewLine.md)
 
 [Sysout](/source/sysout/starTriangle2.md)
 

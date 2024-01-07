@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.stream.Stream;
 import string.deleteComments.DeleteComments;
+import static string.deleteComments.DeleteComments.sep;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -20,51 +21,51 @@ public class TestDeleteComments {
         return Stream.of(
                 Arguments.of("privet(@*)(!$&(%(@)%                           // wewjf wfmweo qikfwif",
                         "privet(@*)(!$&(%(@)%"),
-                Arguments.of("sampleefnwofewjiefw\n" +
-                        "wjiefweofiwefinofewnniofweniobiewfibuewf\n" +
-                        "wiognweifninoewf wefionw oifn oewniffeoiwn wniewfonifewnio\n" +
-                        "fewkfnweo oiwefnwfiwni oinwefinniwfineiwno\n" +
+                Arguments.of("sampleefnwofewjiefw" + sep +
+                        "wjiefweofiwefinofewnniofweniobiewfibuewf" + sep +
+                        "wiognweifninoewf wefionw oifn oewniffeoiwn wniewfonifewnio" + sep +
+                        "fewkfnweo oiwefnwfiwni oinwefinniwfineiwno" + sep +
                         "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
-                        "sampleefnwofewjiefw\n" +
-                                "wjiefweofiwefinofewnniofweniobiewfibuewf\n" +
-                                "wiognweifninoewf wefionw oifn oewniffeoiwn wniewfonifewnio\n" +
-                                "fewkfnweo oiwefnwfiwni oinwefinniwfineiwno\n" +
+                        "sampleefnwofewjiefw" + sep +
+                                "wjiefweofiwefinofewnniofweniobiewfibuewf" + sep +
+                                "wiognweifninoewf wefionw oifn oewniffeoiwn wniewfonifewnio" + sep +
+                                "fewkfnweo oiwefnwfiwni oinwefinniwfineiwno" + sep +
                                 "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"),
-                Arguments.of("print(\"Введите своё имя\")\n" +
-                        "name = input()\n" +
-                        "print(\"Введите пароль, если имеется\")    //  ахахахах вам не поймать меня\n" +
-                        "password = input()\n" +
-                        "if password == \"hoover\":\n" +
-                        "    print(\"Здравствуйте, рыцарь\", name)         // долой Макнамару\n" +
-                        "elif password == \"noncr\":\n" +
-                        "    print(\"Здравствуйте, паладин\", name)\n" +
-                        "elif password == \"gelios\":\n" +
-                        "    print(\"Здравствуйте, старейшина\", name)          // Элайджа вперёд\n" +
-                        "else:\n" +
+                Arguments.of("print(\"Введите своё имя\")" + sep +
+                        "name = input()" + sep +
+                        "print(\"Введите пароль, если имеется\")    //  ахахахах вам не поймать меня" + sep +
+                        "password = input()" + sep +
+                        "if password == \"hoover\":" + sep +
+                        "    print(\"Здравствуйте, рыцарь\", name)         // долой Макнамару" + sep +
+                        "elif password == \"noncr\":" + sep +
+                        "    print(\"Здравствуйте, паладин\", name)" + sep +
+                        "elif password == \"gelios\":" + sep +
+                        "    print(\"Здравствуйте, старейшина\", name)          // Элайджа вперёд" + sep +
+                        "else:" + sep +
                         "    print(\"Здравствуйте, послушник\", name)",
-                        "print(\"Введите своё имя\")\n" +
-                                "name = input()\n" +
-                                "print(\"Введите пароль, если имеется\")\n" +
-                                "password = input()\n" +
-                                "if password == \"hoover\":\n" +
-                                "    print(\"Здравствуйте, рыцарь\", name)\n" +
-                                "elif password == \"noncr\":\n" +
-                                "    print(\"Здравствуйте, паладин\", name)\n" +
-                                "elif password == \"gelios\":\n" +
-                                "    print(\"Здравствуйте, старейшина\", name)\n" +
-                                "else:\n" +
+                        "print(\"Введите своё имя\")" + sep +
+                                "name = input()" + sep +
+                                "print(\"Введите пароль, если имеется\")" + sep +
+                                "password = input()" + sep +
+                                "if password == \"hoover\":" + sep +
+                                "    print(\"Здравствуйте, рыцарь\", name)" + sep +
+                                "elif password == \"noncr\":" + sep +
+                                "    print(\"Здравствуйте, паладин\", name)" + sep +
+                                "elif password == \"gelios\":" + sep +
+                                "    print(\"Здравствуйте, старейшина\", name)" + sep +
+                                "else:" + sep +
                                 "    print(\"Здравствуйте, послушник\", name)"),
-                                Arguments.of("kdeaefk                           //tndjwd\n" + 
-                                        "awk()()!!!                    //ttttt\n" + 
-                                        "fowk\n" + 
-                                        "ttttttttt\n" + 
-                                        "pewrjwermwk //jelwee\n" + 
+                                Arguments.of("kdeaefk                           //tndjwd" + sep + 
+                                        "awk()()!!!                    //ttttt" + sep + 
+                                        "fowk" + sep + 
+                                        "ttttttttt" + sep + 
+                                        "pewrjwermwk //jelwee" + sep + 
                                         "kekekekekekekekekekeke",
-                                "kdeaefk\n" + 
-                                        "awk()()!!!\n" + 
-                                        "fowk\n" + 
-                                        "ttttttttt\n" + 
-                                        "pewrjwermwk\n" + 
+                                "kdeaefk" + sep + 
+                                        "awk()()!!!" + sep + 
+                                        "fowk" + sep + 
+                                        "ttttttttt" + sep + 
+                                        "pewrjwermwk" + sep + 
                                         "kekekekekekekekekekeke")
                                 );
     }
