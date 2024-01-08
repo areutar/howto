@@ -3,19 +3,29 @@
     Всё о дате и времени
 ---
 
+- #### [Numerical](/source/numerical/numerical.md)
+
+    Числовой тип данных
+---
+
 - #### [Sequence](/source/sequence/sequence.md)
 
-    Всё о дате и времени
+    Наборы элементов
 ---
 
 - #### [Simple](/source/simple/simple.md)
 
-    Простые задачи, для которых трудно подобрать тип
+    Разные простые задачи
 ---
 
 - #### [Strings](/source/strings/strings.md)
 
     Строковый тип данных
+---
+
+- #### [Sysout](/source/sysout/sysout.md)
+
+    Отображение(вывод) данных 
 ---
 
 

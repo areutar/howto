@@ -2,6 +2,8 @@
 
 [DateTime](/source/datetime/datetime.md)
 
+[Numerical](/source/numerical/numerical.md)
+
 [Sequence](/source/sequence/sequence.md)
 
 [Simple](/source/simple/simple.md)
@@ -28,6 +30,6 @@
 - [longestWord](/source/strings/longestWord.md)
 - [splitStringByNewLine](/source/strings/splitStringByNewLine.md)
 
-[Sysout](/source/sysout/starTriangle2.md)
+[Sysout](/source/sysout/sysout.md)
 
 [Home](/)

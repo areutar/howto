@@ -3,11 +3,11 @@
 [DateTime](/source/datetime/datetime.md)
 
 [Numerical](/source/numerical/numerical.md)
+- [isPrime](/source/numerical/isPrime.md)
 
 [Sequence](/source/sequence/sequence.md)
 
 [Simple](/source/simple/simple.md)
-- [isGoodPassword](/source/simple/isGoodPassword.md)
 
 [Strings](/source/strings/strings.md)
 
