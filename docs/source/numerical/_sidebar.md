@@ -5,6 +5,7 @@
 [Numerical](/source/numerical/numerical.md)
 - [isPrime](/source/numerical/isPrime.md)
 - [isValidTriangle](/source/numerical/isValidTriangle.md)
+- [maxAndMinDigit](/source/numerical/maxAndMinDigit.md)
 
 [Sequence](/source/sequence/sequence.md)
 
@@ -15,3 +16,4 @@
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
+
