@@ -4,6 +4,7 @@
 
 [Numerical](/source/numerical/numerical.md)
 - [isPrime](/source/numerical/isPrime.md)
+- [isValidTriangle](/source/numerical/isValidTriangle.md)
 
 [Sequence](/source/sequence/sequence.md)
 
