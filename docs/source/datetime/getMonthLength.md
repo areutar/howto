@@ -1,9 +1,6 @@
 ### Получить количество дней в месяце
 
-Напишите функцию get_days(month), которая принимает в качестве аргумента номер месяца и возвращает количество дней в данном месяце.  
-
-1. Гарантируется, что передаваемый аргумент находится в диапазоне от 1 до 12.
-2. Считайте, что год является невисокосным.
+Напишите функцию get_days(month), которая принимает в качестве аргумента номер месяца текущего года и возвращает количество дней в этом месяце.
 
 [Источник](https://stepik.org/lesson/331754/step/7?thread=solutions&unit=315133) 
 
@@ -14,51 +11,83 @@
 from datetime import datetime
 from calendar import monthrange
 
-def get_days(month):
-    current_year = datetime.now().year
-    return monthrange(current_year, month)[1]
+
+def get_month_length(month):
+    current_year = datetime.now().year
+    return monthrange(current_year, month)[1]
 ```
 #### **Test Python**
 ```python
+from get_month_length import *
 import pytest
-import arithm
+
 data = [
-    (1, 31),
-    (2, 28),
-    (3, 31),
-    (11, 30),
-    (12, 31)
+    (1, 31),
+    (2, 29),
+    (3, 31),
+    (11, 30),
+    (12, 31)
 ]
 
-@pytest.mark.parametrize('input, expected', data)
-def test_arithm(input, expected):
-    assert arithm.get_days(input) == expected
+
+@pytest.mark.parametrize('month, expected', data)
+def test_get_month_length(month, expected):
+    actual = get_month_length(month)
+    assert actual == expected
 ```
 
 #### **Java**
 ```java
-public static int getMonthLength(int month) {
-        LocalDate date = LocalDate.now().withMonth(month);
-        return date.getMonth().length(date.isLeapYear());
-    }
+package datetime.getMonthLength;
+
+import java.time.LocalDate;
+
+public class GetMonthLength {
+    public static void getMonthLength(int month) {
+        LocalDate date = LocalDate.now().withMonth(month);
+        int result = date.getMonth().length(date.isLeapYear());
+        System.out.println(result);
+    }
+}
 ```
 #### **Test Java**
 ```java
-package tests;
+package datetime.getMonthLength;
+
 import static org.junit.Assert.assertEquals;
+import static datetime.getMonthLength.GetMonthLength.getMonthLength;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import home.F;
 
-public class FTest {
-    @ParameterizedTest
-    @CsvSource(
-        value  = 
-        {"1, 31", "2, 28", "8, 31", "11, 30", "12, 31"}
-    )
-    void testGetMonthLength(int month, int length) {
-        assertEquals(F.getMonthLength(month), length);
-    }
+public class TestGetMonthLength {
+    private final ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+    @BeforeEach
+    void setSystemOut() {
+        System.setOut(new PrintStream(out));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+            "1, 31",
+            "2, 29",
+            "3, 31",
+            "11, 30",
+            "12, 31"
+    })
+    void testGetMonthLength(int month, String expected) {
+        getMonthLength(month);
+        assertEquals(expected, out.toString().stripTrailing());
+    }
+
+    @AfterEach
+    void restoreOut() {
+        System.setOut(null);
+    }
 }
 ```
 #### **Javascript**
