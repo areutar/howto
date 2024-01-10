@@ -12,6 +12,7 @@
 - [createCopyList](/source/sequence/createCopyList.md)
 - [listSorting](/source/sequence/listSorting.md)
 - [makingSlices](/source/sequence/makingSlices.md)
+- [allElementsAreTheSame](/source/sequence/allElementsAreTheSame.md)
 
 [Simple](/source/simple/simple.md)
 
@@ -20,4 +21,3 @@
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
-
