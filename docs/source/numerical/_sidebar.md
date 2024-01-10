@@ -17,3 +17,6 @@
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
+
+
+- [exchangeWithMinimumCoins](/source/numerical/exchangeWithMinimumCoins.md)
