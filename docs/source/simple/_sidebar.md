@@ -8,6 +8,7 @@
 
 [Simple](/source/simple/simple.md)
 - [isGoodPassword](/source/simple/isGoodPassword.md)
+- [isCorrectBrackets](/source/simple/isCorrectBrackets.md)
 
 [Strings](/source/strings/strings.md)
 
