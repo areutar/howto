@@ -13,6 +13,7 @@
 - [listSorting](/source/sequence/listSorting.md)
 - [makingSlices](/source/sequence/makingSlices.md)
 - [allElementsAreTheSame](/source/sequence/allElementsAreTheSame.md)
+- [isCorrectBrackets2](/source/sequence/isCorrectBrackets2.md)
 
 [Simple](/source/simple/simple.md)
 
@@ -21,3 +22,4 @@
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
+
