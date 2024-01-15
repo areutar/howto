@@ -18,15 +18,17 @@ def build_tokens():
     numberArgs = int(input("How many arguments?"))
     need_wraps = [int(input("Обернуть в кавычки аргумент " + str(i + 1) + "? (1/0?)"))
                   for i in range(numberArgs)]
+    leftBracket = input("Введите левую скобку")
+    rightBracket = input("Введите правую скобку")
     strings = pyperclip.paste().split()
     print(len(strings))
     tokens = []
     for i in range(0, len(strings), numberArgs):
-        token = '('
+        token = leftBracket
         token += ', '.join([
             decorate_token(strings[i + j], need_wraps[j])
             for j in range(numberArgs)])
-        token += ')'
+        token += rightBracket
         tokens.append(token)
 
     return ',\n'.join(tokens)

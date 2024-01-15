@@ -29,7 +29,9 @@
 - [methods](/source/strings/methods.md)
 - [longestWord](/source/strings/longestWord.md)
 - [splitStringByNewLine](/source/strings/splitStringByNewLine.md)
+- [convertToPythonCase](/source/strings/convertToPythonCase.md)
 
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
+
