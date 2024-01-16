@@ -11,6 +11,8 @@
 [Strings](/source/strings/strings.md)
 
 [Sysout](/source/sysout/sysout.md)
+- [starTriangle1](/source/sysout/starTriangle1.md)
 - [starTriangle2](/source/sysout/starTriangle2.md)
 
 [Home](/)
+
