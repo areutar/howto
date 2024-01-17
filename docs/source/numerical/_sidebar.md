@@ -7,6 +7,8 @@
 - [isValidTriangle](/source/numerical/isValidTriangle.md)
 - [maxAndMinDigit](/source/numerical/maxAndMinDigit.md)
 - [powIntegers](/source/numerical/powIntegers.md)
+- [exchangeWithMinimumCoins](/source/numerical/exchangeWithMinimumCoins.md)
+- [getRandomNumber](/source/numerical/getRandomNumber.md)
 
 [Sequence](/source/sequence/sequence.md)
 
@@ -18,5 +20,3 @@
 
 [Home](/)
 
-
-- [exchangeWithMinimumCoins](/source/numerical/exchangeWithMinimumCoins.md)
