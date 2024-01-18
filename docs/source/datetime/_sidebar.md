@@ -1,8 +1,8 @@
 <!-- _sidebar.md -->
 
 [DateTime](/source/datetime/datetime.md)
-
 - [getMonthLength](/source/datetime/getMonthLength.md)
+- [getLocalNameOfMonth](/source/datetime/getLocalNameOfMonth.md)
 
 [Numerical](/source/numerical/numerical.md)
 
