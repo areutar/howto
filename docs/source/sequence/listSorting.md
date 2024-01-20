@@ -16,6 +16,8 @@ a.sort()
 a.reverse()
 ```
 [Источник](https://stepik.org/lesson/324754/step/9?unit=307930)
+[Полезно](https://docs.python.org/3/howto/sorting.html)
+[Полезно](https://www.geeksforgeeks.org/sort-in-python/)
 
 #### **Java**
 

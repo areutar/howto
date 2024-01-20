@@ -9,6 +9,7 @@
 - [powIntegers](/source/numerical/powIntegers.md)
 - [exchangeWithMinimumCoins](/source/numerical/exchangeWithMinimumCoins.md)
 - [getRandomNumber](/source/numerical/getRandomNumber.md)
+- [ramanujanNumbers](/source/numerical/ramanujanNumbers.md)
 
 [Sequence](/source/sequence/sequence.md)
 
@@ -19,4 +20,5 @@
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
+
 

@@ -3,6 +3,7 @@
 Как получить случайное целое(вещественное) число в некотором интервале?
 
 [Источник](https://docs.python.org/3/library/random.html)
+
 [Источник](https://stackoverflow.com/questions/363681/how-do-i-generate-random-integers-within-a-specific-range-in-java)
 
 <!-- tabs: start -->
