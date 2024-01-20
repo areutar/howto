@@ -30,8 +30,10 @@
 - [longestWord](/source/strings/longestWord.md)
 - [splitStringByNewLine](/source/strings/splitStringByNewLine.md)
 - [convertToPythonCase](/source/strings/convertToPythonCase.md)
+- [isPangram](/source/strings/isPangram.md)
 
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
+
 
