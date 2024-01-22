@@ -1,37 +1,44 @@
 package numerical.RamanujanNumbers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RamanujanNumbers {
-    public static List<List<Integer>> getSumOfCubes(int threshold) {
-        List<List<Integer>> sums = new ArrayList<>();
+    public static List<List<Long>> getRamanujanNumbers2(int threshold) {
+        Map<Long, List<Long>> mapSumPairs = new HashMap<>();
+        List<List<Long>> result = new ArrayList<>();
+        long[] cubes = new long[threshold];
+        for (long i = 0; i < threshold; i++) {
+            cubes[(int) (i)] = i * i * i;
+        }
+
         for (int i = 0; i < threshold; i++) {
             for (int j = 0; j < threshold; j++) {
-                if (i >= j) {
-                    continue;
-                } else {
-                    sums.add(List.of(i, j, i * i * i + j * j * j));
+                if (i < j) {
+                    Long sum = cubes[i] + cubes[j];
+                    List<Long> currents = new ArrayList<Long>(
+                            Arrays.asList((long) i, (long) j));
+
+                    mapSumPairs.merge(sum, currents, (t, u) -> {
+                        t.addAll(u);
+                        return t;
+                    });
                 }
             }
         }
-        return sums;
 
-    }
-
-    public static List<List<Integer>> getRamanujanNumbers(int threshold) {
-        List<List<Integer>> sums = getSumOfCubes(threshold);
-        List<List<Integer>> result = new ArrayList<>();
-        for (List<Integer> sum1 : sums) {
-            for (List<Integer> sum2 : sums) {
-                if (sum1.get(2).equals(sum2.get(2))
-                        && !sum1.get(0).equals(sum2.get(0))) {
-                    result.add(sum1);
-                }
+        for (Map.Entry<Long, List<Long>> pair : mapSumPairs.entrySet()) {
+            if (pair.getValue().size() > 2) {
+                List<Long> current = new ArrayList<>(pair.getValue());
+                current.add(0, pair.getKey());
+                result.add(current);
             }
         }
-        result.sort((o1, o2) -> o1.get(2) - o2.get(2));
+
+        result.sort((o1, o2) -> (int) (o1.get(0) - o2.get(0)));
         return result;
     }
-
 }

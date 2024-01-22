@@ -1,20 +1,22 @@
-def getSumOfCubes(threshold):
-    amounts = []
-    for i in range(threshold):
-        for j in range(threshold):
-            if i >= j:
-                continue
-            else:
-                amounts.append((i, j, i ** 3 + j ** 3))
-    return amounts
-
-
 def get_ramanujan_numbers(threshold):
-    amounts = getSumOfCubes(threshold)
-    ramanujan_numbers = []
-    for i, j, sum1 in amounts:
-        for k, l, sum2 in amounts:
-            if sum1 == sum2 and i != k:
-                ramanujan_numbers.append((i, j, sum1))
-    ramanujan_numbers.sort(key=lambda x: x[2])
-    return ramanujan_numbers
+    sums = {}
+    result = {}
+
+    for i in range(threshold):
+        for j in range(i + 1, threshold):
+            current = i ** 3 + j ** 3
+            if current in sums:
+                sums[current] = sums[current] + [i, j]
+            else:
+                sums[current] = [i, j]
+
+    for sum, args in sums.items():
+        if len(args) > 2:
+            result[sum] = args
+
+    sorted_result = sorted(result.items())
+    return sorted_result
+
+
+# первое число, раскладываемое в сумму кубов тремя способами 87539319
+[87539319, 167, 436, 228, 423, 255, 414]

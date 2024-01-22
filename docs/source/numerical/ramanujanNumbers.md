@@ -4,60 +4,60 @@
 
 Напишите программу, которая находит аналогичные интересные числа. В ответе запишите первые 5 чисел в порядке возрастания, включая число 1729.
 
+#### первое число, раскладываемое в сумму кубов тремя способами - 87539319
+[87539319, 167, 436, 228, 423, 255, 414]
+
 [Источник](https://stepik.org/lesson/294080/step/7?unit=275759)
 
 <!-- tabs: start -->
 #### **Python**
 
 ```python
-def getSumOfCubes(threshold):
-    amounts = []
-    for i in range(threshold):
-        for j in range(threshold):
-            if i >= j:
-                continue
-            else:
-                amounts.append((i, j, i ** 3 + j ** 3))
-    return amounts
-
-
 def get_ramanujan_numbers(threshold):
-    amounts = getSumOfCubes(threshold)
-    ramanujan_numbers = []
-    for i, j, sum1 in amounts:
-        for k, l, sum2 in amounts:
-            if sum1 == sum2 and i != k:
-                ramanujan_numbers.append((i, j, sum1))
-    ramanujan_numbers.sort(key=lambda x: x[2])
-    return ramanujan_numbers
+    sums = {}
+    result = {}
+
+    for i in range(threshold):
+        for j in range(i + 1, threshold):
+            current = i ** 3 + j ** 3
+            if current in sums:
+                sums[current] = sums[current] + [i, j]
+            else:
+                sums[current] = [i, j]
+
+    for sum, args in sums.items():
+        if len(args) > 2:
+            result[sum] = args
+
+    sorted_result = sorted(result.items())
+    return sorted_result
 ```
+
 #### **Test Python**
-Для чисел меньших 50 найдено 24 чисел Рамануджана<br>
-Время выполнения - 90ms
-
-Для чисел меньших 100 найдено 90 чисел Рамануджана<br>
-Время выполнения - 1322ms
-
-Для чисел меньших 150 найдено 156 чисел Рамануджана<br>
-Время выполнения - 6113ms
 
 ```python
 from ramanujan_numbers import get_ramanujan_numbers
 from time import time
 
-thresholds = [50, 100, 150]
+threshold = 1000
 output = ''
-for threshold in thresholds:
-    start = time()
-    numbers = get_ramanujan_numbers(threshold)
-    end = time()
-    exec_time = int((end - start) * 1000)
-    output += f'Для чисел меньших {threshold} найдено '\
-        f'{len(numbers)} чисел Рамануджана\n'
-    output += f'Время выполнения - {exec_time}ms\n\n'
-print(output)
-
+start = time()
+numbers = get_ramanujan_numbers(threshold)
+end = time()
+exec_time = int((end - start) * 1000)
+output += f'Для чисел меньших {threshold} найдено '\
+    f'{len(numbers)} чисел Рамануджана\n'
+output += f'Время выполнения - {exec_time}ms\n\n'
+with open('./src/numerical/RamanujanNumbers/python_test.txt',
+          'w',
+          encoding='utf-8') as test_file:
+    test_file.write(output)
+    for number in numbers:
+        test_file.write(str(number) + '\n')
 ```
+Для чисел меньших 1000 найдено 1582 чисел Рамануджана
+
+Время выполнения - 959ms
 
 #### **Java**
 
@@ -65,82 +65,89 @@ print(output)
 package numerical.RamanujanNumbers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RamanujanNumbers {
-    public static List<List<Integer>> getSumOfCubes(int threshold) {
-        List<List<Integer>> sums = new ArrayList<>();
+    public static List<List<Long>> getRamanujanNumbers2(int threshold) {
+        Map<Long, List<Long>> mapSumPairs = new HashMap<>();
+        List<List<Long>> result = new ArrayList<>();
+        long[] cubes = new long[threshold];
+        for (long i = 0; i < threshold; i++) {
+            cubes[(int) (i)] = i * i * i;
+        }
+
         for (int i = 0; i < threshold; i++) {
             for (int j = 0; j < threshold; j++) {
-                if (i >= j) {
-                    continue;
-                } else {
-                    sums.add(List.of(i, j, i * i * i + j * j * j));
+                if (i < j) {
+                    Long sum = cubes[i] + cubes[j];
+                    List<Long> currents = new ArrayList<Long>(
+                            Arrays.asList((long) i, (long) j));
+
+                    mapSumPairs.merge(sum, currents, (t, u) -> {
+                        t.addAll(u);
+                        return t;
+                    });
                 }
             }
         }
-        return sums;
 
-    }
-
-    public static List<List<Integer>> getRamanujanNumbers(int threshold) {
-        List<List<Integer>> sums = getSumOfCubes(threshold);
-        List<List<Integer>> result = new ArrayList<>();
-        for (List<Integer> sum1 : sums) {
-            for (List<Integer> sum2 : sums) {
-                if (sum1.get(2).equals(sum2.get(2))
-                        && !sum1.get(0).equals(sum2.get(0))) {
-                    result.add(sum1);
-                }
+        for (Map.Entry<Long, List<Long>> pair : mapSumPairs.entrySet()) {
+            if (pair.getValue().size() > 2) {
+                List<Long> current = new ArrayList<>(pair.getValue());
+                current.add(0, pair.getKey());
+                result.add(current);
             }
         }
-        result.sort((o1, o2) -> o1.get(2) - o2.get(2));
+
+        result.sort((o1, o2) -> (int) (o1.get(0) - o2.get(0)));
         return result;
     }
-
 }
 ```
 #### **Test Java**
-Для чисел меньших 50 найдено 24 чисел Рамануджана<br>
-Время выполнения - 59ms
-
-Для чисел меньших 100 найдено 90 чисел Рамануджана<br>
-Время выполнения - 237ms
-
-Для чисел меньших 150 найдено 156 чисел Рамануджана<br>
-Время выполнения - 738ms
-
-Для чисел меньших 200 найдено 270 чисел Рамануджана<br>
-Время выполнения - 3681ms
 
 ```java
 package numerical.RamanujanNumbers;
 
-import static numerical.RamanujanNumbers.RamanujanNumbers.getRamanujanNumbers;
+import static numerical.RamanujanNumbers.RamanujanNumbers.getRamanujanNumbers2;
 
-import java.util.Arrays;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class TestRamanujanNumbers {
-    public static void main(String[] args) {
-        List<Integer> thresholds = Arrays.asList(50, 100, 150, 200);
+    public static void main(String[] args) throws IOException {
+        int threshold = 1000;
         StringBuilder builder = new StringBuilder();
-        for (Integer threshold : thresholds) {
-            long start = System.currentTimeMillis();
-            List<List<Integer>> sums = getRamanujanNumbers(threshold);
-            long end = System.currentTimeMillis();
-            builder.append(String.format(
-                    "Для чисел меньших %d найдено %d чисел Рамануджана%n",
-                    threshold, sums.size()));
-            builder.append(String.format(
-                    "Время выполнения - %dms%n%n",
-                    end - start));
-        }
-        System.out.println(builder.toString());
-    }
 
+        long start = System.currentTimeMillis();
+        List<List<Long>> sums = getRamanujanNumbers2(threshold);
+        long end = System.currentTimeMillis();
+        builder.append(String.format(
+                "Для чисел меньших %d найдено %d чисел Рамануджана%n",
+                threshold, sums.size()));
+        builder.append(String.format(
+                "Время выполнения - %dms%n%n",
+                end - start));
+
+        FileWriter writer = new FileWriter(
+                "./src/numerical/RamanujanNumbers/java_test.txt",
+                StandardCharsets.UTF_8);
+        writer.write(builder.toString());
+        for (List<Long> list : sums) {
+            writer.write(list.toString() + System.lineSeparator());
+        }
+        writer.close();
+    }
 }
 ```
+Для чисел меньших 1000 найдено 1582 чисел Рамануджана
+
+Время выполнения - 565ms
 
 #### **JavaScript**
 
