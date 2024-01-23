@@ -161,4 +161,6 @@ public class TestRamanujanNumbers {
 ```
 <!-- tabs: end -->
 
-[Ещё по теме:](https://www.geeksforgeeks.org/find-all-ramanujan-numbers-that-can-be-formed-by-numbers-upto-l/)
+[Решения от гиков](https://www.geeksforgeeks.org/find-all-ramanujan-numbers-that-can-be-formed-by-numbers-upto-l/)
+
+[Кватерн Рамануджана](https://ru.wikiital.com/wiki/Quaterne_di_Ramanujan)

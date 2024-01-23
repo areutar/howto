@@ -10,6 +10,7 @@
 - [exchangeWithMinimumCoins](/source/numerical/exchangeWithMinimumCoins.md)
 - [getRandomNumber](/source/numerical/getRandomNumber.md)
 - [ramanujanNumbers](/source/numerical/ramanujanNumbers.md)
+- [fourFifthsProblem](/source/numerical/fourFifthsProblem.md)
 
 [Sequence](/source/sequence/sequence.md)
 
@@ -20,5 +21,3 @@
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
-
-
