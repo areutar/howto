@@ -2,6 +2,8 @@
 
 [DateTime](/source/datetime/datetime.md)
 
+[Encoding](/source/encoding/encoding.md)
+
 [Numerical](/source/numerical/numerical.md)
 - [isPrime](/source/numerical/isPrime.md)
 - [isValidTriangle](/source/numerical/isValidTriangle.md)

@@ -3,6 +3,7 @@
 [DateTime](/source/datetime/datetime.md)
 
 [Encoding](/source/encoding/encoding.md)
+- [caesarCipher](/source/encoding/caesarCipher.md)
 
 [Numerical](/source/numerical/numerical.md)
 

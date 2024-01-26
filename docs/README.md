@@ -3,6 +3,11 @@
     Всё о дате и времени
 ---
 
+- #### [Encoding](/source/encoding/encoding.md)
+
+    Шифрование
+---
+
 - #### [Numerical](/source/numerical/numerical.md)
 
     Числовой тип данных

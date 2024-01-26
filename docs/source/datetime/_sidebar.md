@@ -4,6 +4,8 @@
 - [getMonthLength](/source/datetime/getMonthLength.md)
 - [getLocalNameOfMonth](/source/datetime/getLocalNameOfMonth.md)
 
+[Encoding](/source/encoding/encoding.md)
+
 [Numerical](/source/numerical/numerical.md)
 
 [Sequence](/source/sequence/sequence.md)

@@ -2,6 +2,8 @@
 
 [DateTime](/source/datetime/datetime.md)
 
+[Encoding](/source/encoding/encoding.md)
+
 [Numerical](/source/numerical/numerical.md)
 
 [Sequence](/source/sequence/sequence.md)
