@@ -1,6 +1,6 @@
 - #### [DateTime](/source/datetime/datetime.md)
 
-    Всё о дате и времени
+    Дата и время
 ---
 
 - #### [Encoding](/source/encoding/encoding.md)
@@ -25,7 +25,7 @@
 
 - #### [Strings](/source/strings/strings.md)
 
-    Строковый тип данных
+    Строки
 ---
 
 - #### [Sysout](/source/sysout/sysout.md)

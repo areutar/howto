@@ -1,17 +1,33 @@
-package encoding.caesarCipher;
+package encoding.caesarCipher2;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class CaesarCipher {
-    public static final String ALPHABET_RU = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-    public static final String ALPHABET_RU_LOW = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
+public class CaesarCipher2 {
+    private static final Pattern pattern = Pattern.compile("\\w+");
     public static final String ALPHABET_EN = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     public static final String ALPHABET_EN_LOW = "abcdefghijklmnopqrstuvwxyz";
     public static List<String> alphabets = List.of(
-            ALPHABET_EN, ALPHABET_EN_LOW, ALPHABET_RU, ALPHABET_RU_LOW);
+            ALPHABET_EN, ALPHABET_EN_LOW);
 
-    public static void caesarCipher(int shift, String text) {
+    public static void main(String[] args) {
+        String input = "Day, mice. \"Year\" is a mistake!";
+        caesarCipher2(input);
+    }
+
+    public static void caesarCipher2(String input) {
+        Matcher matcher = pattern.matcher(input);
+        while (matcher.find()) {
+            String found = matcher.group();
+            String replacement = caesarCipher(found.length(), found);
+            input = input.replaceFirst(found, replacement);
+        }
+        System.out.println(input);
+    }
+
+    public static String caesarCipher(int shift, String text) {
         StringBuilder builder = new StringBuilder();
         text.chars()
                 .mapToObj(i -> (char) i)
@@ -27,7 +43,7 @@ public class CaesarCipher {
                     return alphabet.charAt(newIndex);
                 })
                 .forEach(ch -> builder.append(ch));
-        System.out.println(builder.toString());
+        return builder.toString();
     }
 
     public static Optional<String> getAlphabet(char ch) {
@@ -35,5 +51,4 @@ public class CaesarCipher {
                 .filter(alphabet -> alphabet.indexOf(ch) >= 0)
                 .findFirst();
     }
-
 }

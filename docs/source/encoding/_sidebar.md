@@ -4,6 +4,7 @@
 
 [Encoding](/source/encoding/encoding.md)
 - [caesarCipher](/source/encoding/caesarCipher.md)
+- [caesarCipher2](/source/encoding/caesarCipher2.md)
 
 [Numerical](/source/numerical/numerical.md)
 
@@ -16,3 +17,4 @@
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
+
