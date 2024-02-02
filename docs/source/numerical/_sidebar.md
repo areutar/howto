@@ -13,6 +13,7 @@
 - [getRandomNumber](/source/numerical/getRandomNumber.md)
 - [ramanujanNumbers](/source/numerical/ramanujanNumbers.md)
 - [fourFifthsProblem](/source/numerical/fourFifthsProblem.md)
+- [BOH](/source/numerical/BOH.md)
 
 [Sequence](/source/sequence/sequence.md)
 
