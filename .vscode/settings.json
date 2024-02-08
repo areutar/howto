@@ -1,7 +1,7 @@
 {
     // "terminal.integrated.fontFamily": "'Fira Code', monospace",
     "python.testing.pytestArgs": [
-        "src"
+        "${workspaceFolder}",
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
@@ -28,5 +28,6 @@
         "src"
     ],
         "bookmarks.navigateThroughAllFiles": false,
+        "python.testing.autoTestDiscoverOnSaveEnabled": true,
         
 }

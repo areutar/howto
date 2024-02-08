@@ -16,3 +16,4 @@ with open('./src/numerical/RamanujanNumbers/python_test.txt',
     test_file.write(output)
     for number in numbers:
         test_file.write(str(number) + '\n')
+
