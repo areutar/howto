@@ -15,6 +15,7 @@
 - [fourFifthsProblem](/source/numerical/fourFifthsProblem.md)
 - [BOH](/source/numerical/BOH.md)
 - [flipBit](/source/numerical/flipBit.md)
+- [isPowerOfTwo](/source/numerical/isPowerOfTwo.md)
 
 [Sequence](/source/sequence/sequence.md)
 
@@ -25,3 +26,4 @@
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
+
