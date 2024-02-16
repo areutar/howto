@@ -167,4 +167,6 @@ public class TestIsPowerOfTwo {
 ```
 <!-- tabs: end -->
 
-[Ещё по теме:]()
+[Ещё по теме:](https://fmsha-programming.github.io/seminars/2021-10-12/synopsis.html)
+
+[Ещё по теме:](https://dzen.ru/a/XvREU2I0ajHKWImm)
