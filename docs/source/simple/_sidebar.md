@@ -11,10 +11,12 @@
 [Simple](/source/simple/simple.md)
 - [isGoodPassword](/source/simple/isGoodPassword.md)
 - [moveRobot](/source/simple/moveRobot.md)
+- [leftRectangleFormula](/source/simple/leftRectangleFormula.md)
 
 [Strings](/source/strings/strings.md)
 
 [Sysout](/source/sysout/sysout.md)
 
 [Home](/)
+
 
